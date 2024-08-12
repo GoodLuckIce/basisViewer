@@ -488,7 +488,7 @@
 <input type="button" value="View RGB" onclick="viewRGB()"></input>
 <input type="button" value="View Alpha" onclick="viewAlpha()"></input>
 </br>
-<b id='format'>拖拽 .basis 文件到空白区域进行查看. (Drag the .basis file to the blank area to view it)</b>
+<b id='format'>正在初始化请等待...(Initializing, please wait...)</b>
 <div style="position:absolute; left: 525px; font-size: 20pt; font-weight: bold; color: red">
     <div id="no-compressed-tex" style="display: none; width: 768px; font-size: 20pt; font-weight: bold; color: red">
         NOTE: Your browser does not support several compressed texture format, so using RGB565.
@@ -548,6 +548,9 @@
             }
 
         }
-    }).then(module => window.Module = module);
+    }).then(module => {
+        window.Module = module
+        elem('format').innerText = '拖拽 .basis 文件到空白区域进行查看. (Drag the .basis file to the blank area to view it)';
+    });
 </script>
 </html>
