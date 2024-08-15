@@ -218,7 +218,6 @@
             const startTime = performance.now();
 
             const basisFile = new BasisFile(new Uint8Array(data));
-            window.basisFile = basisFile
 
             width = basisFile.getImageWidth(0, 0);
             height = basisFile.getImageHeight(0, 0);
